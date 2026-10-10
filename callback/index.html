@@ -1,1 +1,8 @@
-<!doctype html><meta charset="utf-8"><title>Tesla 인증</title><p>인증이 끝났습니다. 이 페이지의 주소 전체를 복사해서 맥(Claude)에 붙여 넣으세요.</p>
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Tesla 인증</title>
+<body style="font-family:-apple-system,sans-serif;padding:40px;line-height:1.7">
+<h2 id="m">맥으로 넘기는 중…</h2>
+<script>
+// 인증 코드는 수명이 짧다 — 복사해 옮기지 않고 맥의 teslad(127.0.0.1:8741)로 곧장 넘긴다
+if (/[?&]code=/.test(location.search)) location.replace("http://localhost:8741/oauth/callback" + location.search);
+else document.getElementById("m").textContent = "인증 코드가 없습니다.";
+</script>
